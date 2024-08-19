@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
-import { router } from '../routes/users.routes.js'
+import { router } from '../routes/router.js'
 import './User.js'
 
 
@@ -10,7 +10,7 @@ class Server {
         this.app = express()
         this.port = process.env.PORT
         this.middlewares(),
-        this.routes()
+        this.router()
     }
 
     middlewares() {
@@ -19,8 +19,8 @@ class Server {
         this.app.use(express.json());
     }
 
-    routes() {
-        this.app.use('/api', router)
+    router() {
+        this.app.use('/', router)
     }
 
     listen() {
