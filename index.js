@@ -21,7 +21,5 @@ async function startSever() {
     const server = new Server()
     server.listen() // iniciamos servidor
 }
+
 startSever()
-
-
-

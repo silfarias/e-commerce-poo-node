@@ -6,7 +6,6 @@ class ProductoController {
 
     async createProduct(req, res) {
         try {
-            // const userId = req.user.id;
             const productData = req.body;
             const newProduct = await this.productService.create(productData);
             res.status(201).json(newProduct);

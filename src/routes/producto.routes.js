@@ -12,10 +12,10 @@ class ProductoRoutes {
         const productoController = new ProductoController(productoService);
 
         router.post('/', productoController.createProduct.bind(productoController));
-        router.get('/', productoController.getProducts);
-        router.get('/:id', productoController.getProductById);
-        router.put('/:id', productoController.updateProduct);
-        router.delete('/:id', productoController.deleteProduct);
+        router.get('/', productoController.getProducts.bind(productoController));
+        router.get('/:id', productoController.getProductById.bind(productoController));
+        router.put('/:id', productoController.updateProduct.bind(productoController));
+        router.delete('/:id', productoController.deleteProduct.bind(productoController));
 
         return router;
     }
