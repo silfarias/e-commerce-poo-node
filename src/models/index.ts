@@ -1,10 +1,10 @@
-import { User } from './User.js';
-import { Roles } from './Roles.js';
-import { Producto } from './Producto.js';
-import { Cart } from './Cart.js';
-import { CartItem } from './CartItem.js';
-import { Order } from './Order.js';
-import { OrderItem } from './OrderItem.js';
+import { User } from './User';
+import { Roles } from './Roles';
+import { Producto } from './Producto';
+import { Cart } from './Cart';
+import { CartItem } from './CartItem';
+import { Order } from './Order';
+import { OrderItem } from './OrderItem';
 
 class InitModels {
     static init(database) { // usamos static para no tener que crear una instancia de InitModels

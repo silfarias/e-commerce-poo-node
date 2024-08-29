@@ -1,6 +1,17 @@
 import 'dotenv/config'
+import { IEnvConfig } from '../interfaces/env.interface'
 
-class Config {
+class Config implements IEnvConfig {
+    
+    port: string | undefined;
+    dbName: string | undefined;
+    dbUser: string | undefined;
+    dbPassword: string | undefined;
+    dbHost: string | undefined;
+    dbDialect: string | undefined;
+    dbPort: string | undefined;
+    secretKey?: string;
+
     constructor () {
         this.port = process.env.PORT,
         this.dbName = process.env.DB_NAME,
@@ -26,10 +37,6 @@ class Config {
             port: this.dbPort
         }
     }
-    
-    // getSecretKey() {
-    //     return this.secretKey
-    // }
 }
 
 const config = new Config()

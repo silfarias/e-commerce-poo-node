@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { ProductoService } from '../services/producto.service.js';
-import { ProductoController } from '../controllers/producto.controller.js';
-// import { authMiddleware } from '../middlewares/autenticacion.js';
-// import { authorizeRoles } from '../middlewares/authorizeRoles.js';
-// import { ROLES } from '../constants/roles.js';
+import { ProductoService } from '../services/producto.service';
+import { ProductoController } from '../controllers/producto.controller';
+// import { authMiddleware } from '../middlewares/autenticacion';
+// import { authorizeRoles } from '../middlewares/authorizeRoles';
+// import { ROLES } from '../constants/roles';
 
 class ProductoRoutes {
     static get router() {

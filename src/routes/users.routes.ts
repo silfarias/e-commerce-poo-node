@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { UserService } from '../services/user.service.js';
-import { UserController } from '../controllers/user.controller.js';
-import { userSchema } from '../models/schemas/user.schema.js';
+import { UserService } from '../services/user.service';
+import { UserController } from '../controllers/user.controller';
+import { userSchema } from '../models/schemas/user.schema';
 
 class UserRoutes {
     static get router() {

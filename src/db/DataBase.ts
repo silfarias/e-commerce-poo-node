@@ -1,9 +1,13 @@
-import { config } from "../config/env.config.js";
+import { config } from "../config/env.config";
 import { Sequelize } from "sequelize";
+import { IDataBase } from "../interfaces/database.interface";
 
-class DataBase {
+class DataBase implements IDataBase {
+    private sequelize: Sequelize;
     constructor() {
+        
         const dbConfig = config.getConfigDataBase()
+
         this.sequelize = new Sequelize(
             dbConfig.name,
             dbConfig.user,

@@ -1,6 +1,6 @@
-import { User } from "../models/User.js";
+import { User } from "../models/User";
 import bcrypt from 'bcrypt';
-import { jsonWebToken } from "../utils/jsonWebToken.js";
+import { jsonWebToken } from "../utils/jsonWebToken";
 
 class UserService {
     constructor() {
